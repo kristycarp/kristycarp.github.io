@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/profile.png"
+  avatar           : "profile.png"
   name             : "Kristy A. Carpenter 👩🏻‍💻"
   pronouns         : "she/her"  
   bio              : "Computational biologist passionate about accelerating drug discovery with computation and big data. Currently a PhD Candidate in Biomedical Informatics."
