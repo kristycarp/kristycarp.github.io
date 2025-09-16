@@ -6,8 +6,225 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">This page is currently under construction. In the meantime, you can find my list of publications in my CV and on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">Selected peer-reviewed papers in reverse chronological order. For a complete list of publications, please see my CV or <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 
+  <style>
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p.lead {
+      margin-bottom: 30px;
+    }
+    .pub {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 0 5px;
+    }
+    .meta {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .abstract {
+      font-size: 14px;
+    }
+    .show-more {
+    background: none;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+  }
+  .filters {
+      margin-bottom: 20px;
+    }
+    .filter-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 4px;
+      border: 1px solid #888;
+      border-radius: 12px;
+      background: #f2f2f2;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .filter-btn.active {
+      background: #007acc;
+      color: white;
+      border-color: #007acc;
+    }
+    .tags {
+      margin-top: 5px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      background: #eee;
+      border-radius: 10px;
+      padding: 2px 8px;
+      margin-right: 5px;
+    }
+    .pub-img {
+      flex: 0 0 225px;   /* fixed width */
+      margin-right: 30px;
+    }
+    .pub-img img {
+      width: 100%;
+      height: 160px;     /* fixed height */
+      object-fit: cover; /* crops nicely */
+      border-radius: 6px;
+    }
+    .pub-text {
+      flex: 1; /* take remaining space */
+    }
+  </style>
+  <p></p>
+    <div class="filters">
+    <span class="filter-btn active" onclick="filterPubs('all')">All</span>
+    <span class="filter-btn" onclick="filterPubs('protein-structure')">Protein Structure</span>
+    <span class="filter-btn" onclick="filterPubs('social-media-opioids')">Social Media & Opioids</span>
+    <span class="filter-btn" onclick="filterPubs('drug-discovery')">Drug Discovery</span>
+  </div>
+  <div class="pub" data-tags="social-media-opioids">
+    <div class="pub-img">
+        <img src="/images/social_media_pharmacovigilance.jpeg" alt="Representative figure for social media platform comparison paper" >
+    </div>
+    <div class="pub-text">
+    <div class="title"><a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000842">Which social media platforms facilitate monitoring the opioid crisis?</a></div>
+    <div class="meta"><strong>K.A. Carpenter</strong>, A.T. Nguyen, D.A. Smith, I.A. Samori, K. Humphreys, A. Lembke, M.V. Kiang, J.C. Eichstaedt, R.B. Altman — PLOS Digit. Health (2025)</div>
+    <div class="abstract" data-full="The opioid crisis is a devastating public health challenge, with particular severity in North America. In order to effectively address opioid addiction and overdose, we must be able to track emerging trends in opioid use in a geographic context. In addition to governmental and academic surveys, forensic laboratory drug testing, and overdose death tallies, social media has emerged as a potentially useful data source for monitoring trends in the opioid epidemic. Previous work in this space predominantly relies upon Reddit and X (Twitter). In this work, we went beyond these two platforms to assess a wide range of social platforms for their utility in surveilling opioid trends. We characterized a shortlist of 11 platforms to aid selection of platforms in future opioid surveillance work. TikTok, YouTube, and Facebook emerged as particularly promising alternatives to Reddit and X. Using a wider range of social platforms may improve surveillance of opioid-related problems, in turn potentially better informing measures to mitigate harm from this crisis."></div>
+    <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+    <div class="tags">
+  <span class="tag">Social Media & Opioids</span>
+  </div>
+</div>
+</div>
 
+  <div class="pub" data-tags="protein-structure drug-discovery">
+    <div class="pub-img">
+        <img src="/images/pocket_dbs_review.png" alt="Representative figure for pocket databases review">
+    </div>
+    <div class="pub-text">
+    <div class="title"><a href="https://www.csbj.org/article/S2001-0370(24)00068-0/fulltext">Databases of ligand-binding pockets and protein-ligand interactions</a></div>
+    <div class="meta"><strong>K.A. Carpenter</strong>, R.B. Altman — Comput. Struct. Biotechnol. J. (2024)</div>
+    <div class="abstract" data-full="Many research groups and institutions have created a variety of databases curating experimental and predicted data related to protein-ligand binding. The landscape of available databases is dynamic, with new databases emerging and established databases becoming defunct. Here, we review the current state of databases that contain binding pockets and protein-ligand binding interactions. We have compiled a list of such databases, fifty-three of which are currently available for use. We discuss variation in how binding pockets are defined and summarize pocket-finding methods. We organize the fifty-three databases into subgroups based on goals and contents, and describe standard use cases. We also illustrate that pockets within the same protein are characterized differently across different databases. Finally, we assess critical issues of sustainability, accessibility and redundancy.
+"> </div>
+    <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+    <div class="tags">
+  <span class="tag">Protein Structure</span>
+  <span class="tag">Drug Discovery</span>
+  </div>
+</div>
+</div>
+
+  <div class="pub" data-tags="social-media-opioids">
+    <div class="pub-img">
+        <img src="/images/gpt3_lexicon.jpg" alt="Representative figure for paper using GPT-3 to generate drugs of abuse lexicon">
+    </div>
+    <div class="pub-text">
+    <div class="title"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9953178/">Using GPT-3 to Build a Lexicon of Drugs of Abuse Synonyms for Social Media Pharmacovigilance</a></div>
+    <div class="meta"><strong>K.A. Carpenter</strong>, R.B. Altman — Biomolecules (2023)</div>
+    <div class="abstract" data-full="Drug abuse is a serious problem in the United States, with over 90,000 drug overdose deaths nationally in 2020. A key step in combating drug abuse is detecting, monitoring, and characterizing its trends over time and location, also known as pharmacovigilance. While federal reporting systems accomplish this to a degree, they often have high latency and incomplete coverage. Social-media-based pharmacovigilance has zero latency, is easily accessible and unfiltered, and benefits from drug users being willing to share their experiences online pseudo-anonymously. However, unlike highly structured official data sources, social media text is rife with misspellings and slang, making automated analysis difficult. Generative Pretrained Transformer 3 (GPT-3) is a large autoregressive language model specialized for few-shot learning that was trained on text from the entire internet. We demonstrate that GPT-3 can be used to generate slang and common misspellings of terms for drugs of abuse. We repeatedly queried GPT-3 for synonyms of drugs of abuse and filtered the generated terms using automated Google searches and cross-references to known drug names. When generated terms for alprazolam were manually labeled, we found that our method produced 269 synonyms for alprazolam, 221 of which were new discoveries not included in an existing drug lexicon for social media. We repeated this process for 98 drugs of abuse, of which 22 are widely-discussed drugs of abuse, building a lexicon of colloquial drug synonyms that can be used for pharmacovigilance on social media.
+"> </div>
+    <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+    <div class="tags">
+  <span class="tag">Social Media & Opioids</span>
+  </div>
+</div>
+</div>
+
+<div class="pub" data-tags="protein-structure">
+  <div class="pub-img">
+        <img src="/images/training_data_struc_ml.png" alt="Representative figure for study on trainin data composition for protein structure ML">
+    </div>
+    <div class="pub-text">
+    <div class="title"><a href="https://www.worldscientific.com/doi/abs/10.1142/9789811250477_0002">Training data composition affects performance of protein structure analysis algorithms</a></div>
+    <div class="meta">A. Derry*, <strong>K.A. Carpenter*</strong>, R.B. Altman — Pac. Symp. Biocomput. (2022)</div>
+    <div class="abstract" data-full="The three-dimensional structures of proteins are crucial for understanding their molecular mechanisms and interactions. Machine learning algorithms that are able to learn accurate representations of protein structures are therefore poised to play a key role in protein engineering and drug development. The accuracy of such models in deployment is directly influenced by training data quality. The use of different experimental methods for protein structure determination may introduce bias into the training data. In this work, we evaluate the magnitude of this effect across three distinct tasks: estimation of model accuracy, protein sequence design, and catalytic residue prediction. Most protein structures are derived from X-ray crystallography, nuclear magnetic resonance (NMR), or cryo-electron microscopy (cryo-EM); we trained each model on datasets consisting of either all three structure types or of only X-ray data. We Find that across these tasks, models consistently perform worse on test sets derived from NMR and cryo-EM than they do on test sets of structures derived from X-ray crystallography, but that the difference can be mitigated when NMR and cryo-EM structures are included in the training set. Importantly, we show that including all three types of structures in the training set does not degrade test performance on X-ray structures, and in some cases even increases it. Finally, we examine the relationship between model performance and the biophysical properties of each method, and recommend that the biochemistry of the task of interest should be considered when composing training sets.
+"> </div>
+    <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+    <div class="tags">
+  <span class="tag">Protein Structure</span>
+  </div>
+</div>
+</div>
+
+<div class="pub" data-tags="drug-discovery">
+  <div class="pub-img">
+        <img src="/images/ml_for_vs.jpg" alt="Representative figure for review on ML for virtual screening">
+    </div>
+    <div class="pub-text">
+    <div class="title"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6327115/">Machine learning-based virtual screening and its applications to Alzheimer's drug discovery: a Review</a></div>
+    <div class="meta"><strong>K.A. Carpenter</strong>, X. Huang — Curr. Pharm. Des. (2018)</div>
+    <div class="abstract" data-full="Background: Virtual Screening (VS) has emerged as an important tool in the drug development process, as it conducts efficient in silico searches over millions of compounds, ultimately increasing yields of potential drug leads. As a subset of Artificial Intelligence (AI), Machine Learning (ML) is a powerful way of conducting VS for drug leads. ML for VS generally involves assembling a filtered training set of compounds, comprised of known actives and inactives. After training the model, it is validated and, if sufficiently accurate, used on previously unseen databases to screen for novel compounds with desired drug target binding activity.
+
+Objective: The study aims to review ML-based methods used for VS and applications to Alzheimer's Disease (AD) drug discovery.
+
+Methods: To update the current knowledge on ML for VS, we review thorough backgrounds, explanations, and VS applications of the following ML techniques: Naïve Bayes (NB), k-Nearest Neighbors (kNN), Support Vector Machines (SVM), Random Forests (RF), and Artificial Neural Networks (ANN).
+
+Results: All techniques have found success in VS, but the future of VS is likely to lean more largely toward the use of neural networks - and more specifically, Convolutional Neural Networks (CNN), which are a subset of ANN that utilize convolution. We additionally conceptualize a work flow for conducting ML-based VS for potential therapeutics for AD, a complex neurodegenerative disease with no known cure and prevention. This both serves as an example of how to apply the concepts introduced earlier in the review and as a potential workflow for future implementation.
+
+Conclusion: Different ML techniques are powerful tools for VS, and they have advantages and disadvantages albeit. ML-based VS can be applied to AD drug development.
+"> </div>
+    <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+    <div class="tags">
+  <span class="tag">Drug Discovery</span>
+</div>
+  </div>
+</div>
+
+<script>
+function truncateWords(text, limit=20) {
+const words = text.split(/\s+/);
+if(words.length <= limit) return text;
+return words.slice(0, limit).join(" ") + "...";
+}
+
+
+function initAbstracts(){
+document.querySelectorAll('.abstract').forEach(abs => {
+const full = abs.getAttribute('data-full');
+abs.textContent = truncateWords(full);
+});
+}
+
+
+function toggleAbstract(btn){
+const abs = btn.previousElementSibling;
+const full = abs.getAttribute('data-full');
+if(btn.textContent === "Show more"){
+abs.textContent = full;
+btn.textContent = "Show less";
+} else {
+abs.textContent = truncateWords(full);
+btn.textContent = "Show more";
+}
+}
+
+
+function filterPubs(tag){
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  document.querySelectorAll('.pub').forEach(pub => {
+    const tags = pub.getAttribute('data-tags').split(/\s+/);
+    if(tag === 'all' || tags.includes(tag)){
+      pub.style.display = '';
+    } else {
+      pub.style.display = 'none';
+    }
+  });
+}
+
+initAbstracts();
+</script>
