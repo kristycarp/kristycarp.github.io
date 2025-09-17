@@ -48,31 +48,35 @@ author_profile: true
   .filters {
       margin-bottom: 20px;
     }
-    .filter-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      margin: 4px;
-      border: 1px solid #888;
-      border-radius: 12px;
-      background: #f2f2f2;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    .filter-btn.active {
-      background: #007acc;
-      color: white;
-      border-color: #007acc;
-    }
+  /* Default (light mode) */
+.filter-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px;
+  border: 1px solid #888;
+  border-radius: 12px;
+  background: #cccccc;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000000; /* black text in light mode */
+}
+
+.filter-btn.active {
+  background: #007acc;
+  color: #ffffff;
+}
+
     .tags {
       margin-top: 5px;
     }
     .tag {
       display: inline-block;
       font-size: 12px;
-      background: #eee;
+      background: #cccccc;
       border-radius: 10px;
       padding: 2px 8px;
       margin-right: 5px;
+      color: #000000;
     }
     .pub-img {
       flex: 0 0 225px;   /* fixed width */
