@@ -175,7 +175,7 @@ function initAbstracts(){
   });
 }
 
-function toggleAbstract(btn) {
+window.toggleAbstract = function(btn) {
   const pub = btn.closest('.pub');
   const abs = pub.querySelector('.abstract');
   const full = abs.getAttribute('data-full');
@@ -192,36 +192,31 @@ function toggleAbstract(btn) {
     if (fig0) fig0.style.display = "none";
     if (fig0img) fig0img.style.display = "none";
   }
-}
+};
 
-function toggleFigure0(el) {
+window.toggleFigure0 = function(el) {
   const pub = el.closest('.pub');
   if (!pub) return;
-
   const abs = pub.querySelector('.abstract');
   const img = pub.querySelector('.figure0-img');
   const showAbstractLink = pub.querySelector('.show-abstract');
   const actions = pub.querySelector('.abstract-actions');
-
   if (!abs || !img || !showAbstractLink || !actions) return;
 
-  // If abstract is visible → hide it and show the figure
   if (abs.style.display !== "none") {
     abs.style.display = "none";
-    actions.style.display = "none";       // hide "Show more/less" + "Figure 0"
+    actions.style.display = "none";
     img.style.display = "block";
     showAbstractLink.style.display = "block";
-  } 
-  // If figure is visible → hide it and show the abstract back
-  else {
+  } else {
     abs.style.display = "block";
-    actions.style.display = "flex";       // bring back abstract actions
+    actions.style.display = "flex";
     img.style.display = "none";
     showAbstractLink.style.display = "none";
   }
-}
+};
 
-function filterPubs(tag, event){
+window.filterPubs = function(tag, event){
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
 
@@ -229,7 +224,7 @@ function filterPubs(tag, event){
     const tags = pub.getAttribute('data-tags').split(/\s+/);
     pub.style.display = (tag === 'all' || tags.includes(tag)) ? '' : 'none';
   });
-}
+};
 
 // initialize abstracts once page is loaded
 initAbstracts();
