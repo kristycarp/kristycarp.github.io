@@ -221,10 +221,6 @@ function toggleFigure0(el) {
   }
 }
 
-
-
-
-
 function filterPubs(tag, event){
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   event.target.classList.add('active');
@@ -235,5 +231,7 @@ function filterPubs(tag, event){
   });
 }
 
+// initialize abstracts once page is loaded
 initAbstracts();
 </script>
+
