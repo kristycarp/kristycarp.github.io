@@ -11,4 +11,4 @@ I am currently a PhD candidate in Biomedical Informatics (within the [Department
 
 The driving motivation of my work is to use computational methods, particularly machine learning, to accelerate drug discovery and contribute to biomedical knowledge. My PhD work is mostly focused on protein-ligand binding at the molecular structure level -- specifically, structure-based binding pocket discovery, and leveraging off-target binding predictions to make hypotheses about adverse drug reactions and drug repurposing opportunities. I also work on techniques to leverage text from social media to track patterns in the opioid crisis.
 
-I am on the job market, primarily looking for postdoctoral and scientist opportunities in pharma/biotech. Please feel free to [contact me](mailto:kcarp@stanford.edu) if you think my background would be a good fit for your team.
+I am on the job market. Please feel free to [contact me](mailto:kcarp@stanford.edu) if you think my background would be a good fit for your team.
