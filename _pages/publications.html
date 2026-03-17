@@ -7,8 +7,7 @@ author_profile: true
 
 {% if site.author.googlescholar %}
 <div class="wordwrap">
-  Selected peer-reviewed papers in reverse chronological order. For a complete list of publications, please see my CV or 
-  <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
+Selected peer-reviewed papers and preprints in reverse chronological order. For a complete list of publications, please see my CV or <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.
 </div>
 <p></p>
 {% endif %}
@@ -60,6 +59,71 @@ p.lead { margin-bottom: 30px; }
 </div>
 
 <!-- Publications List -->
+<div class="pub" data-tags="drug-discovery">
+  <div class="pub-img">
+    <img src="/images/piglet.jpg" alt="Representative figure for PIGLET paper">
+  </div>
+  <div class="pub-text">
+    <div class="title">
+      <a href="https://www.biorxiv.org/content/10.64898/2026.02.18.706530v1.abstract">Drug-Target Interaction Prediction with PIGLET</a>
+    </div>
+    <div class="meta"><strong>K.A. Carpenter</strong>, R.B. Altman — bioRxiv (2026)</div>
+    <div class="abstract" data-full="Drug-target interaction (DTI) prediction is a key task for computed-aided drug development that has been widely approached by deep learning models. Despite extremely high reported performance, these models have yet to find widespread success in accelerating real-world drug discovery. In contrast with the most common approach of creating embeddings from one-dimensional or three-dimensional representations of the input drug and input target, we create a novel graph transformer method for DTI prediction that operates on a proteome-wide knowledge graph of binding pocket similarity, protein-protein interactions, drug similarity, and known binding relationships. We benchmark our method, named PIGLET, against existing DTI prediction models on the Human dataset. We assess performance with two different splitting strategies: the frequently-reported random split, and a novel, more rigorous drug-based split. All models perform similarly well on the random split, and PIGLET outperforms all models on the drug-based split. We highlight the utility of PIGLET through a real-world drug discovery case study."></div>
+    <div class="abstract-actions">
+      <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+    </div>
+    <div class="tags">
+      <span class="tag">Drug Discovery</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="pub" data-tags="social-media-opioids">
+  <div class="pub-img">
+    <img src="/images/disambiguation.png" alt="Representative figure for disambiguation paper">
+  </div>
+  <div class="pub-text">
+    <div class="title">
+      <a href="https://arxiv.org/abs/2603.10313">Large language models can disambiguate opioid slang on social media</a>
+    </div>
+    <div class="meta"><strong>K.A. Carpenter</strong>, I.A. Samori, M.V. Kiang, K. Humphreys, A. Lembke, J.C. Eichstaedt, R.B. Altman — arXiv (2026)</div>
+    <div class="abstract" data-full="Social media text shows promise for monitoring trends in the opioid overdose crisis; however, the overwhelming majority of social media text is unrelated to opioids. When leveraging social media text to monitor trends in the ongoing opioid overdose crisis, a common strategy for identifying relevant content is to use a lexicon of opioid-related terms as inclusion criteria. However, many slang terms for opioids, such as &quot;smack&quot; or &quot;blues,&quot; have common non-opioid meanings, making them ambiguous. The advanced textual reasoning capability of large language models (LLMs) presents an opportunity to disambiguate these slang terms at scale. We present three tasks on which to evaluate four state-of-the-art LLMs (GPT-4, GPT-5, Gemini 2.5 Pro, and Claude Sonnet 4.5): a lexicon-based setting, in which the LLM must disambiguate a specific term within the context of a given post; a lexicon-free setting, in which the LLM must identify opioid-related posts from context without a lexicon; and an emergent slang setting, in which the LLM must identify opioid-related posts with simulated new slang terms. All four LLMs showed excellent performance across all tasks. In both subtasks of the lexicon-based setting, LLM F1 scores (&quot;fenty&quot; subtask: 0.824-0.972; &quot;smack&quot; subtask: 0.540-0.862) far exceeded those of the best lexicon strategy (0.126 and 0.009, respectively). In the lexicon-free task, LLM F1 scores (0.544-0.769) surpassed those of lexicons (0.080-0.540), and LLMs demonstrated uniformly higher recall. On emergent slang, all LLMs had higher accuracy (average: 0.784), F1 score (average: 0.712), precision (average: 0.981), and recall (average: 0.587) than the two lexicons assessed. Our results show that LLMs can be used to identify relevant content for low-prevalence topics, including but not limited to opioid references, enhancing data provided to downstream analyses and predictive models.
+"></div>
+    <div class="abstract-actions">
+      <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+    </div>
+    <div class="tags">
+      <span class="tag">Social Media & Opioids</span>
+    </div>
+  </div>
+</div>
+
+<div class="pub" data-tags="protein-structure drug-discovery">
+  <div class="pub-img">
+    <img src="/images/hotpocket.png" alt="Representative figure for HOTPocket paper">
+  </div>
+  <div class="pub-text">
+    <div class="title">
+      <a href="https://link.springer.com/article/10.1186/s13321-025-01125-x">The Human Omnibus of Targetable Pockets</a>
+    </div>
+    <div class="meta"><strong>K.A. Carpenter</strong>, R.B. Altman — J. Chem. Inf. (2025)</div>
+    <div class="abstract" data-full="Hundreds of computational methods for predicting ligand binding pockets exist, but the problem of finding druggable pockets throughout the human proteome persists. Different strategies for pocket-finding excel in different use cases. Ensemble models that leverage multiple different pocket-finding strategies can best capture diverse pockets at scale. Despite this, no publicly available human-proteome-wide datasets of pocket predictions from multiple pocket-finding methods exist. We present the Human Omnibus of Targetable Pockets (HOTPocket), a dataset of over 2.4 million predicted pockets over the entire human proteome that utilizes both experimentally-determined and computationally-predicted protein structures. We assembled this dataset by running seven diverse, established pocket-finding methods over all PDB and AlphaFold2 structures of the canonical human proteome. We created a novel pocket scoring method, hotpocketNN, which we used to filter candidate pockets and assemble the final proteome-wide dataset. Our hotpocketNN method is able to recover known ligand binding pockets, including those which are dissimilar from any pocket seen in its training set. The hotpocketNN method outperforms all constituent methods, including P2Rank and Fpocket, when assessing the precision with DCA criterion on the Astex Diverse Set and PoseBusters dataset. Additionally, hotpocketNN was able to identify recently-discovered druggable pockets on KRAS and the mu opioid receptor. We make both the HOTPocket dataset and the hotpocketNN method freely available.
+
+"></div>
+    <div class="abstract-actions">
+      <button class="show-more" onclick="toggleAbstract(this)">Show more</button>
+      <a href="#" class="figure-0" onclick="toggleFigure0(this); return false;" style="display:none;">Figure 0</a>
+    </div>
+    <img src="/images/fig0/hotpocket.png" class="figure0-img" style="display:none;">
+    <a href="#" class="show-abstract" onclick="toggleFigure0(this); return false;" style="display:none;">Show abstract</a>
+    <div class="tags">
+      <span class="tag">Protein Structure</span>
+      <span class="tag">Drug Discovery</span>
+    </div>
+  </div>
+</div>
+
 <div class="pub" data-tags="social-media-opioids">
   <div class="pub-img">
     <img src="/images/social_media_pharmacovigilance.jpeg" alt="Representative figure for social media platform comparison paper">
