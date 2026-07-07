@@ -23,13 +23,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Kristy A. Carpenter 👩🏻‍💻"
+  name             : "Kristy A. Carpenter, PhD"
   pronouns         : "she/her"  
-  bio              : "Computational biologist passionate about accelerating drug discovery with computation and big data. Currently a PhD Candidate in Biomedical Informatics."
+  bio              : "Computational biologist passionate about accelerating drug discovery with computation and big data. PhD in Biomedical Informatics."
   location         : "Stanford, CA"
   employer         : "Stanford University"
   uri              : # URL
-  email            : "kcarp@stanford.edu" 
+  email            : "kcarp@alumni.stanford.edu"
 
   # Academic websites
   academia         : # URL
